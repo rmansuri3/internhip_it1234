@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Hands-On Tasks</title>
+  <link rel="stylesheet" href="myfile.css">
+</head>
+<body>
+  <main class="container">
+    <h1>JavaScript Hands-On Tasks</h1>
+
+    <section class="card">
+      <h2>Task 1: Interactive Buttons</h2>
+
+      <p id="text">This text can be changed using the controls below.</p>
+
+      <div class="controls">
+        <button id="redBtn">RED</button>
+        <button id="greenBtn">GREEN</button>
+        <button id="blueBtn">BLUE</button>
+
+        <select id="fontSelect">
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Verdana">Verdana</option>
+        </select>
+
+        <button id="increaseBtn">A+</button>
+        <button id="decreaseBtn">A-</button>
+      </div>
+
+      <div class="controls">
+        <button id="boldBtn">Bold</button>
+        <button id="italicBtn">Italic</button>
+        <button id="underlineBtn">Underline</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Task 2: Simple Form Validation</h2>
+
+      <form id="userForm">
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="email" id="email" placeholder="Enter your email">
+        <button type="submit">Submit</button>
+      </form>
+
+      <p id="formMessage" class="message"></p>
+    </section>
+
+    <section class="card">
+      <h2>Task 3: Simple Calculator</h2>
+
+      <input type="number" id="number1" placeholder="First number">
+      <input type="number" id="number2" placeholder="Second number">
+
+      <div class="controls">
+        <button data-operation="add">Add</button>
+        <button data-operation="subtract">Subtract</button>
+        <button data-operation="multiply">Multiply</button>
+        <button data-operation="divide">Divide</button>
+      </div>
+
+      <p id="calculatorMessage" class="message"></p>
+      <h3 id="result">Result: </h3>
+    </section>
+
+    <section class="card">
+      <h2>Bonus: Theme Switcher</h2>
+      <button id="lightBtn">Light Theme</button>
+      <button id="darkBtn">Dark Theme</button>
+    </section>
+  </main>
+
+  <script src="myfile.js"></script>
+</body>
+</html>
