@@ -1,0 +1,180 @@
+:root {
+  --primary: #2563eb;
+  --background: #f8fafc;
+  --text: #1e293b;
+  --card: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+body.dark-theme {
+  --background: #0f172a;
+  --text: #f8fafc;
+  --card: #1e293b;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--card);
+  box-shadow: 0 2px 10px #0002;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.navbar h1 {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.theme-button,
+.button {
+  border: none;
+  border-radius: 6px;
+  padding: 11px 16px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 85vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  margin: 15px 0;
+}
+
+.hero span,
+.tagline {
+  color: var(--primary);
+}
+
+.hero p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.about p {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.skills-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.skill,
+.project-card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px #0002;
+  transition: transform 0.3s;
+}
+
+.skill:hover,
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card h3 {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  gap: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: var(--card);
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
